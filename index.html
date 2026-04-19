@@ -2077,12 +2077,13 @@ document.addEventListener("click", () => {
         <div class="yt-frame-container">
           <!-- PASTE YOUR YOUTUBE EMBED HERE — replace the placeholder div with:
                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+               <div class="yt-placeholder-text">GORILLA CORP BROADCAST CHANNEL<br>VIDEO PENDING UPLOAD</div>
           -->
           <div class="yt-placeholder">
             <div class="yt-placeholder-icon">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
             </div>
-            <div class="yt-placeholder-text">GORILLA CORP BROADCAST CHANNEL<br>VIDEO PENDING UPLOAD</div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/098QFxySVaM?si=7TQx0-eyiRWuwun_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -2257,7 +2258,7 @@ document.addEventListener("click", () => {
           <div class="rank-locked" style="color:var(--gc-purple-light)">MANAGER</div>
         </div>
         <div class="rank-row rank-m3">
-          <div class="rank-level">LVL 16</div>
+          <div class="rank-level">LVL 17</div>
           <div class="rank-bar-wrap rank-m3" style="width:100%">
             <div class="rank-bar">
               <div class="rank-bar-label">MANAGER 5</div>
@@ -2267,7 +2268,7 @@ document.addEventListener("click", () => {
           <div class="rank-locked" style="color:#e070ff">CLASSIFIED</div>
         </div>
         <div class="rank-row rank-m3">
-          <div class="rank-level">LVL 15</div>
+          <div class="rank-level">LVL 18</div>
           <div class="rank-bar-wrap rank-m3" style="width:100%">
             <div class="rank-bar">
               <div class="rank-bar-label">Founder</div>
@@ -2307,60 +2308,31 @@ document.addEventListener("click", () => {
       <div class="chloe-section-label">&#9888; Active Investigation — Incident #0044</div>
       <div class="chloe-section-title">Persons of Interest</div>
 
+      <!-- CHLOE -->
       <div class="wanted-grid">
         <div class="wanted-poster">
-          <img
-            src="assets/images/chloe.png"
-            alt="CHLOE — WANTED FOR QUESTIONING"
-            class="wanted-poster-img"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-          >
+          <img src="assets/images/chloe.png" alt="CHLOE — WANTED FOR QUESTIONING" class="wanted-poster-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
           <div class="wanted-poster-img-placeholder" style="display:none;">
             <div style="font-size:48px;opacity:0.3;">&#63;</div>
             <div>IMAGE CLASSIFIED</div>
           </div>
           <div class="wanted-name-stamp">CHLOE</div>
-          <div class="wanted-sub">Unregistered Personnel — No Corp ID on File</div>
-          <div class="wanted-reward">REWARD: 100,000 SHINY ROCKS</div>
+          <div class="wanted-sub">Unregistered Personnel — Corp ID deactivated on March 5th, 2026 - No longer on file</div>
+          <div class="wanted-reward">REWARD: 110,000 SHINY ROCKS</div>
         </div>
-
         <div>
           <div class="wanted-details">
-            <div style="font-family:var(--font-display);font-size:0.75rem;color:var(--gc-red);letter-spacing:0.15em;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,45,85,0.2);">SUBJECT DOSSIER — GORILLA CORP SECURITY DIVISION</div>
-            <div class="wanted-detail-row">
-              <span class="wanted-detail-label">Alias</span>
-              <span class="wanted-detail-val">Chloe (no surname on record)</span>
-            </div>
-            <div class="wanted-detail-row">
-              <span class="wanted-detail-label">Corp ID</span>
-              <span class="wanted-detail-val" style="color:var(--gc-red);">[CLASSIFIED]</span>
-            </div>
-            <div class="wanted-detail-row">
-              <span class="wanted-detail-label">Clearance Level</span>
-              <span class="wanted-detail-val">Visitor 1. Access was obtained illegally.</span>
-            </div>
-            <div class="wanted-detail-row">
-              <span class="wanted-detail-label">Last Seen</span>
-              <span class="wanted-detail-val">March 7, 2026 — Sector 9-G Tunnel Corridor</span>
-            </div>
-            <div class="wanted-detail-row">
-              <span class="wanted-detail-label">Known Associate</span>
-              <span class="wanted-detail-val">Unidentified "Masked Monke" — also at large</span>
-            </div>
-            <div class="wanted-detail-row">
-              <span class="wanted-detail-label">Known Activity</span>
-              <span class="wanted-detail-val">Breach of Alien Hatchery. Said "I knew it." Fled custody.</span>
-            </div>
-            <div class="wanted-detail-row">
-              <span class="wanted-detail-label">Threat Level</span>
-              <span class="wanted-detail-val" style="color:var(--gc-yellow);">ELEVATED — Possesses classified knowledge</span>
-            </div>
-            <div class="wanted-detail-row">
-              <span class="wanted-detail-label">Status</span>
-              <span class="wanted-detail-val" style="color:var(--gc-red);">AT LARGE — Whereabouts unknown</span>
-            </div>
+            <div style="font-family:var(--font-display);font-size:0.75rem;color:var(--gc-red);letter-spacing:0.15em;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,45,85,0.2);">SUBJECT CHLOE — GORILLA CORP SECURITY DIVISION</div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Alias</span><span class="wanted-detail-val">Chloe (no surname on record)</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Corp ID</span><span class="wanted-detail-val" style="color:var(--gc-red);">[CLASSIFIED]</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Clearance Level</span><span class="wanted-detail-val">Visitor 2. Access was obtained illegally.</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Last Seen</span><span class="wanted-detail-val">March 7, 2026 — Sector 9-G Tunnel Corridor</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Known Associate</span><span class="wanted-detail-val">Unidentified "Masked Monke" — also at large</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Known Activity</span><span class="wanted-detail-val">Breach of Alien Hatchery. Said "I knew it." Fled custody.</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Threat Level</span><span class="wanted-detail-val" style="color:var(--gc-yellow);">ELEVATED — Possesses classified knowledge</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Status</span><span class="wanted-detail-val" style="color:var(--gc-red);">AT LARGE — Whereabouts unknown</span></div>
           </div>
-
           <div class="wanted-warning">
             <strong style="color:var(--gc-red);font-family:var(--font-display);font-size:0.7rem;letter-spacing:0.15em;display:block;margin-bottom:8px;">&#9888; EMPLOYEE ADVISORY</strong>
             If you encounter this individual — in person, in writing, via reverse whistle, or through any unconventional method of contact — you are required to report it to your nearest Manager immediately.<br><br>
@@ -2369,8 +2341,43 @@ document.addEventListener("click", () => {
           </div>
         </div>
       </div>
-    </div>
-  </div>
+
+      <!-- MASKED MONKE -->
+      <div class="wanted-grid" style="margin-top:2.5rem;">
+        <div class="wanted-poster">
+          <img src="assets/images/masked_monke.png" alt="MASKED MONKE — WANTED FOR QUESTIONING" class="wanted-poster-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="wanted-poster-img-placeholder" style="display:none;">
+            <div style="font-size:48px;opacity:0.3;">&#63;</div>
+            <div>IDENTITY UNKNOWN</div>
+          </div>
+          <div class="wanted-name-stamp">MASKED MONKE</div>
+          <div class="wanted-sub">Anonymous — Corp ID never associated with any "masked monke" records</div>
+          <div class="wanted-reward">REWARD: NONE</div>
+        </div>
+        <div>
+          <div class="wanted-details">
+            <div style="font-family:var(--font-display);font-size:0.75rem;color:var(--gc-red);letter-spacing:0.15em;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,45,85,0.2);">SUBJECT: MASKED MONKE — GORILLA CORP SECURITY DIVISION</div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Alias</span><span class="wanted-detail-val">The Masked Monke (no name on record)</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Corp ID</span><span class="wanted-detail-val" style="color:var(--gc-red);">NONE — Never activated under this alias</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Clearance Level</span><span class="wanted-detail-val">None. Access was obtained illegally.</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Last Seen</span><span class="wanted-detail-val">CODE: MM — April 19, 2026</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Known Associate</span><span class="wanted-detail-val">Chloe — also at large</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Known Activity</span><span class="wanted-detail-val">Hatchery breach. Recruiting individuals. Warning others about Gorilla Corp.</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Threat Level</span><span class="wanted-detail-val" style="color:var(--gc-yellow);">ELEVATED — Active recruitment ongoing</span></div>
+            <div class="wanted-detail-row"><span class="wanted-detail-label">Status</span><span class="wanted-detail-val" style="color:var(--gc-red);">AT LARGE — Whereabouts unknown</span></div>
+          </div>
+          <div class="wanted-warning">
+            <strong style="color:var(--gc-red);font-family:var(--font-display);font-size:0.7rem;letter-spacing:0.15em;display:block;margin-bottom:8px;">&#9888; MASKED MONKE SIGHTING — CODE: MM</strong>
+            Subject was last seen on April 19, 2026, actively recruiting individuals and warning them about Gorilla Corp. Individuals contacted WILL go unnamed pending investigation. Their identities have not yet been revealed.<br><br>
+            <strong style="color:white;">Do not engage with recruitment.</strong> Do not listen to claims made against Gorilla Corp. Report all contact to Loyalty Enforcement immediately.<br><br>
+            <span class="corrupted">Search for Masked Monke is active. No rewards are guaranteed.</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- closes chloe-section -->
+  </div><!-- closes section -->
 
   <footer>
     <div class="footer-links">
