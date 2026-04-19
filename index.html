@@ -1622,6 +1622,318 @@ footer {
   92% { opacity: 0.9; filter: hue-rotate(180deg); }
   94% { opacity: 0.4; }
 }
+
+/* ===== POST BANNERS ===== */
+.post-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  margin-bottom: 0;
+  font-family: var(--font-data);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  border-left: 4px solid;
+  position: relative;
+}
+
+.post-banner-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.post-banner-text strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.post-banner.banner-critical {
+  background: rgba(255,45,85,0.08);
+  border-color: var(--gc-red);
+  color: #FF8FA3;
+}
+
+.post-banner.banner-warning {
+  background: rgba(255,214,10,0.07);
+  border-color: var(--gc-yellow);
+  color: #ffe580;
+}
+
+.post-banner.banner-info {
+  background: rgba(123,47,190,0.08);
+  border-color: var(--gc-purple);
+  color: var(--gc-purple-glow);
+}
+
+.post-banner.banner-success {
+  background: rgba(48,209,88,0.07);
+  border-color: var(--gc-green);
+  color: #7fffb0;
+}
+
+.post-banner.banner-classified {
+  background: rgba(255,45,85,0.04);
+  border-color: var(--gc-red);
+  color: rgba(255,45,85,0.7);
+  font-style: italic;
+}
+
+/* ===== CHLOE WANTED POSTER ===== */
+.chloe-section {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--gc-border);
+}
+
+.chloe-section-label {
+  font-family: var(--font-data);
+  font-size: 0.65rem;
+  color: var(--gc-red);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.chloe-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  color: var(--gc-text-bright);
+  margin-bottom: 1.5rem;
+}
+
+.wanted-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 700px) {
+  .wanted-grid { grid-template-columns: 1fr; }
+}
+
+.wanted-poster {
+  border: 3px solid rgba(255,45,85,0.5);
+  background: rgba(255,45,85,0.04);
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+
+.wanted-poster::before {
+  content: 'WANTED FOR QUESTIONING';
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--gc-red);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.wanted-poster-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border: 1px solid rgba(255,45,85,0.3);
+  filter: sepia(0.2) contrast(1.05);
+}
+
+.wanted-poster-img-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #1a0008, #2a000f);
+  border: 1px solid rgba(255,45,85,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  color: rgba(255,45,85,0.4);
+  font-family: var(--font-data);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+}
+
+.wanted-name-stamp {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--gc-red);
+  letter-spacing: 0.2em;
+  margin-top: 14px;
+  text-shadow: 0 0 20px rgba(255,45,85,0.4);
+}
+
+.wanted-sub {
+  font-family: var(--font-data);
+  font-size: 0.6rem;
+  color: rgba(255,45,85,0.6);
+  margin-top: 4px;
+  letter-spacing: 0.1em;
+}
+
+.wanted-reward {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  color: var(--gc-yellow);
+  margin-top: 10px;
+  letter-spacing: 0.15em;
+  border: 1px solid rgba(255,214,10,0.3);
+  padding: 4px 10px;
+  display: inline-block;
+}
+
+.wanted-details {
+  background: var(--gc-panel);
+  border: 1px solid var(--gc-border);
+  border-left: 3px solid var(--gc-red);
+  padding: 1.5rem;
+}
+
+.wanted-detail-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(45,31,74,0.4);
+  font-family: var(--font-data);
+  font-size: 0.75rem;
+}
+
+.wanted-detail-row:last-child { border-bottom: none; }
+
+.wanted-detail-label { color: var(--gc-text-dim); letter-spacing: 0.1em; }
+.wanted-detail-val { color: var(--gc-text); }
+
+.wanted-warning {
+  margin-top: 1.25rem;
+  background: rgba(255,45,85,0.06);
+  border: 1px solid rgba(255,45,85,0.2);
+  padding: 1rem;
+  font-family: var(--font-data);
+  font-size: 0.75rem;
+  color: #FF8FA3;
+  line-height: 1.8;
+}
+
+/* ===== YOUTUBE BOX ===== */
+.yt-news-box {
+  background: var(--gc-panel);
+  border: 1px solid var(--gc-border);
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.yt-news-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gc-purple), var(--gc-purple-glow), transparent);
+}
+
+.yt-news-header {
+  padding: 1rem 1.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--gc-border);
+}
+
+.yt-news-header-title {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gc-text-bright);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.yt-news-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gc-red);
+  box-shadow: 0 0 8px var(--gc-red);
+  flex-shrink: 0;
+  animation: pulse 1.5s infinite;
+}
+
+.yt-news-tag {
+  font-family: var(--font-data);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: var(--gc-red);
+  background: rgba(255,45,85,0.1);
+  border: 1px solid rgba(255,45,85,0.25);
+  padding: 2px 8px;
+  text-transform: uppercase;
+}
+
+.yt-embed-wrap {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.yt-frame-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  border: 1px solid var(--gc-border);
+  overflow: hidden;
+}
+
+.yt-frame-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.yt-placeholder {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, #0a0014, #0e0e1a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.yt-placeholder-icon {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: rgba(255,45,85,0.15);
+  border: 2px solid rgba(255,45,85,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yt-placeholder-icon svg {
+  width: 28px; height: 28px;
+  fill: var(--gc-red);
+  margin-left: 4px;
+}
+
+.yt-placeholder-text {
+  font-family: var(--font-data);
+  font-size: 0.7rem;
+  color: var(--gc-text-dim);
+  letter-spacing: 0.15em;
+  text-align: center;
+}
 </style>
 </head>
 <body>
@@ -1751,6 +2063,28 @@ document.addEventListener("click", () => {
         <div class="stat-number">3.4%</div>
         <div class="stat-label">Lemming's Notebook</div>
         <div class="stat-sub">probability of useful item</div>
+      </div>
+    </div>
+
+    <!-- LATEST NEWS YOUTUBE BOX -->
+    <div class="yt-news-box">
+      <div class="yt-news-header">
+        <div class="yt-news-dot"></div>
+        <span class="yt-news-header-title">Latest News</span>
+        <span class="yt-news-tag">LIVE FEED</span>
+      </div>
+      <div class="yt-embed-wrap">
+        <div class="yt-frame-container">
+          <!-- PASTE YOUR YOUTUBE EMBED HERE — replace the placeholder div with:
+               <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+          -->
+          <div class="yt-placeholder">
+            <div class="yt-placeholder-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="yt-placeholder-text">GORILLA CORP BROADCAST CHANNEL<br>VIDEO PENDING UPLOAD</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1967,10 +2301,78 @@ document.addEventListener("click", () => {
         <div class="blog-excerpt">The Gorilla Corp Administration is pleased to announce the temporary closure of the Ghost Reactor for undisclosed technological upgrades. Duration: indeterminate. Personnel contracts remain soul-bound...</div>
       </div>
     </div>
+
+    <!-- CHLOE WANTED POSTER -->
+    <div class="chloe-section">
+      <div class="chloe-section-label">&#9888; Active Investigation — Incident #0044</div>
+      <div class="chloe-section-title">Persons of Interest</div>
+
+      <div class="wanted-grid">
+        <div class="wanted-poster">
+          <img
+            src="assets/images/chloe.png"
+            alt="CHLOE — WANTED FOR QUESTIONING"
+            class="wanted-poster-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          >
+          <div class="wanted-poster-img-placeholder" style="display:none;">
+            <div style="font-size:48px;opacity:0.3;">&#63;</div>
+            <div>IMAGE CLASSIFIED</div>
+          </div>
+          <div class="wanted-name-stamp">CHLOE</div>
+          <div class="wanted-sub">Unregistered Personnel — No Corp ID on File</div>
+          <div class="wanted-reward">REWARD: 100,000 SHINY ROCKS</div>
+        </div>
+
+        <div>
+          <div class="wanted-details">
+            <div style="font-family:var(--font-display);font-size:0.75rem;color:var(--gc-red);letter-spacing:0.15em;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,45,85,0.2);">SUBJECT DOSSIER — GORILLA CORP SECURITY DIVISION</div>
+            <div class="wanted-detail-row">
+              <span class="wanted-detail-label">Alias</span>
+              <span class="wanted-detail-val">Chloe (no surname on record)</span>
+            </div>
+            <div class="wanted-detail-row">
+              <span class="wanted-detail-label">Corp ID</span>
+              <span class="wanted-detail-val" style="color:var(--gc-red);">[CLASSIFIED]</span>
+            </div>
+            <div class="wanted-detail-row">
+              <span class="wanted-detail-label">Clearance Level</span>
+              <span class="wanted-detail-val">Visitor 1. Access was obtained illegally.</span>
+            </div>
+            <div class="wanted-detail-row">
+              <span class="wanted-detail-label">Last Seen</span>
+              <span class="wanted-detail-val">March 7, 2026 — Sector 9-G Tunnel Corridor</span>
+            </div>
+            <div class="wanted-detail-row">
+              <span class="wanted-detail-label">Known Associate</span>
+              <span class="wanted-detail-val">Unidentified "Masked Monke" — also at large</span>
+            </div>
+            <div class="wanted-detail-row">
+              <span class="wanted-detail-label">Known Activity</span>
+              <span class="wanted-detail-val">Breach of Alien Hatchery. Said "I knew it." Fled custody.</span>
+            </div>
+            <div class="wanted-detail-row">
+              <span class="wanted-detail-label">Threat Level</span>
+              <span class="wanted-detail-val" style="color:var(--gc-yellow);">ELEVATED — Possesses classified knowledge</span>
+            </div>
+            <div class="wanted-detail-row">
+              <span class="wanted-detail-label">Status</span>
+              <span class="wanted-detail-val" style="color:var(--gc-red);">AT LARGE — Whereabouts unknown</span>
+            </div>
+          </div>
+
+          <div class="wanted-warning">
+            <strong style="color:var(--gc-red);font-family:var(--font-display);font-size:0.7rem;letter-spacing:0.15em;display:block;margin-bottom:8px;">&#9888; EMPLOYEE ADVISORY</strong>
+            If you encounter this individual — in person, in writing, via reverse whistle, or through any unconventional method of contact — you are required to report it to your nearest Manager immediately.<br><br>
+            Do <strong style="color:white;">not</strong> engage. Do <strong style="color:white;">not</strong> listen to what she says. Do <strong style="color:white;">not</strong> write it down.<br><br>
+            <span class="corrupted">Gorilla Corp is aware that she knows things she should not. That is all.</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer>
-    <div class="footer-logo">GORILLA CORP ADMINISTRATION — EST. BEFORE YOU NEED TO KNOW</div>
     <div class="footer-links">
       <a onclick="showPage('home')">Home</a>
       <a onclick="showPage('blog')">Updates</a>
@@ -2572,10 +2974,14 @@ document.addEventListener("click", () => {
       <!-- MAIN ARTICLES -->
       <div class="blog-main-article">
         <div class="blog-article-img">
-          <div class="img-label">BREACH</div>
+          <img src="assets/images/breach_blog.png" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="blog-article-body">
           <div class="blog-date">MARCH 8, 2026 <span class="blog-tag">INCIDENT</span> <span class="blog-tag" style="color:var(--gc-red);border-color:rgba(255,45,85,0.3);">PRIORITY ZERO</span></div>
+          <div class="post-banner banner-critical">
+            <span class="post-banner-icon">&#9888;</span>
+            <div class="post-banner-text"><strong>Active Incident — Personnel Advisory</strong>Chloe and the masked monke remain at large. Report any contact to management immediately. Do not engage. Do not listen.</div>
+          </div>
           <div class="blog-article-title">UNDERGROUND TUNNEL SYSTEM & ALIEN HATCHERY — OFFICIAL INCIDENT STATEMENT</div>
           <div class="blog-article-text">
             <div class="memo-box">
@@ -2601,6 +3007,10 @@ document.addEventListener("click", () => {
         </div>
         <div class="blog-article-body">
           <div class="blog-date">OCT 17, 2025 <span class="blog-tag">REACTOR</span></div>
+          <div class="post-banner banner-success">
+            <span class="post-banner-icon">&#9679;</span>
+            <div class="post-banner-text"><strong>Status: Resolved</strong>Ghost Reactor 2.0 is currently fully operational. All zones accessible to eligible personnel.</div>
+          </div>
           <div class="blog-article-title">GHOST REACTOR 2.0 — REOPENING & FULL UPGRADE BRIEFING</div>
           <div class="blog-article-text">
             <p style="margin-bottom:1rem;">Valued Resources! GorillaCorp is thrilled to announce a new era of progress. Following our extended closure period (September 19 – October 17, 2025), the Ghost Reactor has been fully overhauled and relaunched as Ghost Reactor 2.0.</p>
@@ -2616,6 +3026,10 @@ document.addEventListener("click", () => {
         </div>
         <div class="blog-article-body">
           <div class="blog-date">SEP 18, 2025 <span class="blog-tag">NOTICE</span></div>
+          <div class="post-banner banner-warning">
+            <span class="post-banner-icon">&#9679;</span>
+            <div class="post-banner-text"><strong>Status: Archived</strong>This shutdown period has concluded. Reactor 2.0 opened October 17, 2025. Contracts remained soul-bound throughout.</div>
+          </div>
           <div class="blog-article-title">GHOST REACTOR — EXTENDED SHUTDOWN ANNOUNCEMENT</div>
           <div class="blog-article-text">
             The Gorilla Corp Administration released a statement on September 18, 2025 announcing the Ghost Reactor's closure for an extended period of technological upgrades. The nature and duration of these upgrades were classified. Personnel contracts remained soul-bound during the closure period. The Ghost Reactor officially shut down for technological upgrades on September 19, 2025. Employees were advised to remain productive during the interim and to continue smiling.
@@ -2629,6 +3043,10 @@ document.addEventListener("click", () => {
         </div>
         <div class="blog-article-body">
           <div class="blog-date">MAY 2, 2025 <span class="blog-tag">LAUNCH</span></div>
+          <div class="post-banner banner-info">
+            <span class="post-banner-icon">&#9654;</span>
+            <div class="post-banner-text"><strong>Historical Record</strong>Ghost Reactor original launch. Version 1.0 — now superseded by Ghost Reactor 2.0.</div>
+          </div>
           <div class="blog-article-title">GHOST REACTOR — GRAND OPENING & EMPLOYMENT OPPORTUNITIES</div>
           <div class="blog-article-text">
             Gorilla Corp officially opened the Ghost Reactor on May 2, 2025, following a teaser period in which a sign was mounted on boarded-up Mines entrance boards indicating that "the danger was contained." The Ghost Reactor represents Gorilla Corp's largest operational initiative. Employees are assigned company IDs representing legally binding, potentially soul-bound contracts. Spectral Core collection shifts begin immediately. Gorilla Bucks wages are competitive. A cipher on TikTok previously hinted "More is coming on the 30th of May." The Ghost Reactor's rank system launched shortly after, allowing employees to rise through the clearance hierarchy.
@@ -2816,7 +3234,10 @@ function showPage(id) {
     return;
   }
 
+  // Reset scroll on every page switch — works across all browsers
   window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
 }
 
 // LOGIN TABS
