@@ -1963,37 +1963,35 @@ footer {
   }
 }
 
-.gc-glitch {
+.gc-header-wrap {
+  position: relative;
+  height: 50px; /* reserve space so layout doesn't break */
+}
+
+#gc-event-header {
   position: fixed;
-  top: 86px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 56px; /* right under your 56px nav */
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  z-index: 2000;
+  text-align: center;
 
-  /* RAINBOW TEXT */
-  background: linear-gradient(
-    90deg,
-    #ff004c,
-    #ff7a00,
-    #ffe600,
-    #2bff00,
-    #00ffd5,
-    #2b7bff,
-    #d400ff,
-    #ff004c
-  );
+  background: rgba(8, 5, 8, 0.85);
+  border-top: 1px solid rgba(213, 45, 255, 0.25);
+  border-bottom: 1px solid rgba(213, 45, 255, 0.25);
+  color: var(--gc-purple-glow);
+  padding: 10px 0;
 
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  text-shadow:
+    0 0 8px rgba(255,45,85,0.6),
+    0 0 20px rgba(255,45,85,0.3);
 
-  animation: rainbowShift 3s linear infinite, glitchFlicker 1.8s infinite;
-  text-shadow: 0 0 12px rgba(255,255,255,0.15);
+  animation: gc-glitch 2.5s infinite;
 }
 
 .gc-timer {
@@ -2024,33 +2022,6 @@ footer {
   50% { opacity: 0.85; }
 }
 
-#gc-event-header {
-  position: fixed;
-  top: 86px; /* 56px nav + 30px gap */
-  left: 0;
-  right: 0;
-  z-index: 9999;
-
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-
-  color: var(--gc-red);
-  text-align: center;
-
-  background: rgba(5,5,8,0.85);
-  border-top: 1px solid rgba(255,45,85,0.25);
-  border-bottom: 1px solid rgba(255,45,85,0.25);
-
-  padding: 10px 0;
-
-  text-shadow:
-    0 0 8px rgba(255,45,85,0.6),
-    0 0 20px rgba(255,45,85,0.3);
-
-  animation: gc-glitch 2.5s infinite;
-}
 
 /* glitch effect */
 @keyframes gc-glitch {
@@ -2198,8 +2169,10 @@ updateTimer();
 <!-- NAVIGATION -->
 <nav>
   <!-- GORILLA CORP LIVE COUNTDOWN HEADER -->
-<div class="gc-glitch" id="gc-header" data-text="GORILLA CORP PRESENTS - GHOST REACTOR BIRTHDAY!">
-  GORILLA CORP PRESENTS - GHOST REACTOR BIRTHDAY!
+<div class="gc-header-wrap">
+  <div id="gc-event-header" class="gc-glitch">
+    GORILLA CORP PRESENTS - GHOST REACTOR BIRTHDAY!
+  </div>
 </div>
 
 <div class="gc-timer">
@@ -2250,7 +2223,7 @@ updateTimer();
         <span class="motd-badge">MESSAGE FROM EDUARDO</span>
 
         <strong>APRIL 21, 2026 — NOTICE:</strong>
-        All personnel are reminded to be on LOOKOUT for "BRIE". Please report to any Manager near the kiosk of ghost reactor, if "BRIE" is spotted in the Gorilla World.
+        Hey, It's me. With Frank out of town, i was sure i could get Beans to lead me to Chloe and the Masked Monke, but that Brie got in the way. We need to do something about her.
         </div>
       </div>
       <div class="hero-eyebrow">GORILLA CORP ADMINISTRATION — PUBLIC PORTAL v7.4</div>
@@ -2574,7 +2547,7 @@ updateTimer();
           </div>
           <div class="wanted-name-stamp">CHLOE</div>
           <div class="wanted-sub">Unregistered Personnel — Corp ID deactivated on March 5th, 2026 - No longer on file</div>
-          <div class="wanted-reward">REWARD: 130,000 SHINY ROCKS</div>
+          <div class="wanted-reward">REWARD: 140,000 SHINY ROCKS</div>
         </div>
         <div>
           <div class="wanted-details">
